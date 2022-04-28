@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const Scheme = mongoose.Schema;
 const { ObjectId } = require("mongodb");
 
-const ClientSchema = new Scheme({
-  clientId: {
+const UserSchema = new Scheme({
+  userId: {
     type: ObjectId,
     required: true,
   },
@@ -36,4 +36,4 @@ const ClientSchema = new Scheme({
   },
 });
 
-module.exports = Client = mongoose.model("Client", ClientSchema);
+module.exports = User = mongoose.model("User", UserSchema);
